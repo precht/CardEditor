@@ -19,23 +19,31 @@ public class Assets implements Disposable {
 	private String deckPath;
 	private String deckName = "";
 	private Texture cardTexture;
+	public static final char separator = findSeparator();
+
+	public static char findSeparator() {
+		if (System.getProperty("os.name").startsWith("Windows"))
+			return '\\';
+		else
+			return '/';
+	}
 
 	public Assets() {
-		cardTexture = new Texture(Gdx.files.internal("cards/empty-card.png"));
+		System.out.println(separator);
+		cardTexture = new Texture(Gdx.files.internal("cards" + separator + "empty-card.png"));
 		cardTexture.setFilter(TextureFilter.Linear, TextureFilter.Linear);
 		setDeckPath();
 		System.out.println(deckPath);
 	}
 
 	private void setDeckPath() {
-		String pwd;
+		String pwd = null;
 		try {
 			pwd = Assets.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
-			pwd = pwd.substring(0, pwd.lastIndexOf('/') + 1);
+			pwd = pwd.substring(0, pwd.lastIndexOf(separator) + 1);
 		} catch (URISyntaxException e) {
-			pwd = System.getProperty("user.dir");
 		}
-		deckPath = pwd + "decks/";
+		deckPath = pwd + "decks" + separator;
 	}
 
 	public String addCard() {
