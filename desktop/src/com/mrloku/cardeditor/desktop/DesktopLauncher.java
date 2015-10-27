@@ -9,7 +9,7 @@ public class DesktopLauncher {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 		config.width = 990;
 		config.height = 660;
-		config.title = "Cards Editor 1.1";
+		config.title = "Cards Editor";
 		new LwjglApplication(new CardEditorMain(), config);
 	}
 }
