@@ -13,7 +13,7 @@ public class CardEditorMain extends Game {
 
 	@Override
 	public void create() {
-		Gdx.app.setLogLevel(Application.LOG_DEBUG);
+		Gdx.app.setLogLevel(Application.LOG_NONE);
 		assets = new Assets();
 		screen = new MainScreen(assets);
 		setScreen(screen);

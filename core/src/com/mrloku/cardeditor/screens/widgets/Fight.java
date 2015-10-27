@@ -96,9 +96,8 @@ public class Fight {
 
 		h1 += a2;
 		h2 += a1;
-		for (int i = 0; h1 > 0 && h2 > 0 && i < 99; i++) { // i < 99 because i
-															// must end
-															// eventually
+		// i < 99 to avoid endless loop
+		for (int i = 0; h1 > 0 && h2 > 0 && i < 99; i++) {
 			h1 -= a2;
 			h2 -= a1;
 			inTab.add(new Label(String.format("%5d", h1), skin)).left();

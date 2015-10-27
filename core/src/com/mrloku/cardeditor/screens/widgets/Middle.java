@@ -123,13 +123,6 @@ public class Middle {
 			@Override
 			public void changed(ChangeEvent event, Actor actor) {
 				ArrayList<String> newVals = new ArrayList<>();
-				/*
-				 * not good idea, ability can be empty // delete white spaces at
-				 * beginning and end for (CARD_PROPERTY cp :
-				 * CARD_PROPERTY.values()) if (cp.getType() instanceof String)
-				 * cardTxfs.get(cp.ordinal()).setText(cardTxfs.get(cp.ordinal())
-				 * .getText().trim());
-				 */
 				// remember title to set proper card number after reloading
 				// titles to side pane
 				String title = cardTxfs.get(CARD_PROPERTY.TITLE.ordinal()).getText().trim();

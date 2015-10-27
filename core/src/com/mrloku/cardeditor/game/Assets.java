@@ -29,11 +29,9 @@ public class Assets implements Disposable {
 	}
 
 	public Assets() {
-		System.out.println(separator);
 		cardTexture = new Texture(Gdx.files.internal("cards" + separator + "empty-card.png"));
 		cardTexture.setFilter(TextureFilter.Linear, TextureFilter.Linear);
 		setDeckPath();
-		System.out.println(deckPath);
 	}
 
 	private void setDeckPath() {
