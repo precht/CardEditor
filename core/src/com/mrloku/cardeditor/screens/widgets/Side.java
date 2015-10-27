@@ -39,17 +39,6 @@ public class Side {
 	private class ListChangeListener extends ChangeListener {
 		@Override
 		public void changed(ChangeEvent event, Actor actor) {
-			/*
-			 * // enable changing card only from chosen views switch
-			 * (middleWidgets.getView()) { case CARD: case START: case ADD_CARD:
-			 * middleWidgets.setView(VIEW_TYPE.CARD); if
-			 * (middleWidgets.unsaved()) { list.setSelectedIndex(selected); }
-			 * else { selected = list.getSelectedIndex();
-			 * middleWidgets.update(); } break; default: // do nothing
-			 * Gdx.app.debug(TAG, "not card view: " +
-			 * middleWidgets.getView().name()); list.setSelectedIndex(selected);
-			 * break; }
-			 */
 			middle.setView(VIEW_TYPE.CARD);
 			if (middle.unsaved()) {
 				list.setSelectedIndex(selected);
