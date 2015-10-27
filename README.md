@@ -7,5 +7,5 @@ Installation:
 > Just go to releases and download jar file. 
 
 Note: 
-> It stores deck's files in "decks" directory next jar file.
+> It stores deck's files in "decks" directory next to jar file.
 
