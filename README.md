@@ -5,3 +5,5 @@ Info:
 
 Installation:
 > Just go to releases and download jar file. 
+> NOTE: App stores deck's files in "decks" directory next jar file.
+
